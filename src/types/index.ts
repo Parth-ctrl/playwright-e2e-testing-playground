@@ -52,3 +52,12 @@ export interface ShippingAddress {
   postal_code: string;
   country: string;
 }
+
+export interface Task {
+  id: string;
+  ticket_id: string;
+  ticket_link: string;
+  time_estimate: number | null;
+  time_estimate_display: string | null;
+  last_updated: string | null;
+}
