@@ -1,0 +1,9 @@
+{
+  "columns": [
+    { "key": "id", "header": "ID", "width": 30 },
+    { "key": "ticketId", "header": "Ticket ID", "width": 50 },
+    { "key": "ticketLink", "header": "Ticket Link", "width": 100 },
+    { "key": "timeEstimate", "header": "Time Estimation", "width": 60 }
+  ],
+  "syncInterval": 300000
+}

@@ -52,3 +52,37 @@ export interface ShippingAddress {
   postal_code: string;
   country: string;
 }
+
+export interface ClickUpTask {
+  id: string;
+  name: string;
+  time_estimate: number | null;
+}
+
+export interface SheetRow {
+  id: string;
+  ticketId: string;
+  ticketLink: string;
+  timeEstimate: string | null;
+  lastUpdated: string | null;
+}
+
+export function convertMillisecondsToReadable(milliseconds: number | null): string {
+  if (!milliseconds || milliseconds === 0) {
+    return '';
+  }
+  
+  const totalMinutes = Math.floor(milliseconds / 60000);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  
+  if (hours === 0) {
+    return `${minutes}m`;
+  }
+  
+  if (minutes === 0) {
+    return `${hours}h`;
+  }
+  
+  return `${hours}h ${minutes}m`;
+}
